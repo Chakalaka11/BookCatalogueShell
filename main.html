@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="BookCatalogueApp">
+	<head>
+		<title>Book Catalogue</title>
+		<meta charset="UTF-8">
+		<!-- Styles -->
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+		<link rel="stylesheet" href="css/site.css" type="text/css">
+		<!-- Scripts -->
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/site.js"></script>
+	</head>
+
+	<body ng-controller="MainController">
+		<div class="outer">
+			<div class="black-pad" >
+					<div class="form col-md-4 col-md-offset-4">
+						<p>Name of the book</p>
+						<input type="text" id="name" class="form-control"  placeholder="Type here">
+						<p>Author</p>
+						<input type="text" id="author" class="form-control"  placeholder="Type here">
+						<p>Price</p>
+						<input type="text" id="price" class="form-control"  placeholder="Type here">
+						<div class="button" ng-click="addbook()">Add book</div>
+					</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="main-title">{{title}}</div>
+			
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">
+					<div id="search-tab">
+						<span class="glyphicon glyphicon-search"></span>
+						<input type="text" class="form-control" ng-model="pattern" placeholder="Search string...">
+					</div>
+				</div>
+				<div class="col-md-4">
+						<div class="button" ng-click="click($event)">
+							<span class="glyphicon glyphicon-plus"></span> 
+							Add new book
+						</div>
+				</div>
+			</div>			
+			<div class="row">
+				<div class="col-md-3" ng-repeat="book in books | filter:Match(pattern) ">
+					<div class="book">				
+						<div class="price">{{book.Price|currency}}</div>
+						<div class="image">
+							<div>
+								<img src="img/book.jpg">
+							</div>
+						</div>
+						<div class="name">{{book.Name}}</div>
+						<div class="author">{{book.Author}}</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+	<!-- Angular Controllers -->
+	<script src="js/Controllers/MainController.js"></script>
+</html>

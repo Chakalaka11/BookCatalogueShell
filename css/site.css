@@ -1,0 +1,101 @@
+@import 'https://fonts.googleapis.com/css?family=Alex+Brush';
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400i&subset=cyrillic,cyrillic-ext';
+@import 'https://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic,cyrillic-ext';
+
+body{
+	position: relative;
+}
+.outer{	
+	display: none;
+	z-index: 999;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.black-pad{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
+.form{
+	border-radius: 5px;
+	background: #fff;
+	text-align: center;
+	top: 30%;
+}
+.col-md-3,.col-md-4{
+	padding: 15px;
+}
+.form-control{
+	display: inline-block;
+	width: auto;
+}
+.glyphicon{
+	font-size: 15px;
+}
+.main-title{
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Alex Brush', cursive;
+}
+.form>.button
+{
+	margin: 10px;
+}
+.button{
+	border: 1px solid #000;
+	padding: 5px;
+	border-radius: 4px; 
+	width: auto;
+}
+.button:hover{
+	cursor: pointer;
+}
+.button:hover>span{
+	color: #9BC53D;
+}
+.price
+{
+	position: absolute;
+	background: #DD3750;
+	color: #fff;
+	padding: 5px;
+	font-size: 18px;
+	top: 0px;
+	right: 0px;
+}
+.image{
+	height: 300px;
+	width: 100%;
+	display: table;
+}
+.image>div
+{
+	max-height: 100%;
+	max-width: 100%;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+img{
+	max-height: 100%;
+	max-width: 100%;
+}
+.book{
+	position: relative;
+	border: 2px solid #DD5F61;
+	padding: 10px;
+}
+.name{
+	font-size: 19px;
+	font-family: 'PT Sans';
+	font-style: italic;
+}
+.author{
+	font-size: 12px;
+	font-family: 'PT Sans', sans-serif;
+
+}
