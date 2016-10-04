@@ -46,13 +46,14 @@ body{
 	margin: 10px;
 }
 .button{
-	border: 1px solid #000;
 	padding: 5px;
 	border-radius: 4px; 
 	width: auto;
+	text-align: center;
 }
 .button:hover{
 	cursor: pointer;
+	border-bottom: 1px solid  #9BC53D;
 }
 .button:hover>span{
 	color: #9BC53D;

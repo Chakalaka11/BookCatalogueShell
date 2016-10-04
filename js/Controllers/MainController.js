@@ -1,5 +1,5 @@
 
-var server = "http://localhost:54146/";
+var server = "http://bookcatalogue.azurewebsites.net/";
 var actionUrl = ["home/getall/","home/addbook/"];
 
 
